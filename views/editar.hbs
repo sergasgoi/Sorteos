@@ -1,0 +1,31 @@
+<div class="editar">
+
+    <form action="/editar" method="post">
+
+        <input type="hidden" name="id_nsort" value="{{edit.id_nsort}}" />
+        <input type="hidden" name="sorteo" value="{{edit.sorteo}}" />
+
+
+        <h4>Editar la Persona N°: {{edit.participante}}, del sorteo: {{edit.sorteo}}</h4>
+
+        <br>
+        <input class="form-control" maxlength="15" type="text" name="nombre" id="inputNombre" value="{{edit.nombre}}"
+            placeholder="Coloque el nuevo Nombre" />
+        <br>
+        <input class="form-control" maxlength="15" type="text" name="apellido" id="inputApellido" value="{{edit.apellido}}"
+            placeholder="Coloque el nuevo Apellido" />
+        <br>
+        <input class="form-control" maxlength="13" type="tel" name="telefono" id="inputTelefono" value="{{edit.telefono}}"
+            placeholder="Coloque el numero de Telefono"/>
+        <br>
+        
+
+        <button class="btn btn-primary" type="submit">Editar</button>
+
+    </form>
+    <br>
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+
+</div>

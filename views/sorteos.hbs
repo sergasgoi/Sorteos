@@ -1,0 +1,33 @@
+<div class="sorteos">
+
+    {{#if sort}}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Sorteo</th>
+                <th scope="col">Dueño</th>
+                <th scope="col">Ver</th>
+            </tr>
+        </thead>
+        {{#each sort}}
+        <tbody>
+            <tr>
+                <th scope="row">{{sorteo}}</th>
+                <th scope="row">{{usuario}}</th>
+                <th scope="row"><a href="/versorteos/{{sorteo}}&{{id_usuario}}"><img class="ver1" src="/images/lupa.png"></a></th>
+                
+                
+                
+            </tr>
+
+        </tbody>
+        {{/each}}
+
+
+    </table>
+    {{else}}
+    <h2>No existe ningun sorteo</h2>
+    {{/if}}
+
+</div>

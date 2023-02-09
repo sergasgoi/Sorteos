@@ -1,0 +1,23 @@
+<div class="registrar">
+
+    <form action="/register" method="post">
+
+        <br>
+        <input class="form-control"  type="text" name="usuario" placeholder="Coloque el nombre de Usuario" />
+        <br>
+        <br>
+
+        <input class="form-control"  type="text" name="contraseña" placeholder="Coloque su nueva Contraseña" />
+        <br>
+        <br>
+
+
+        <button class="btn btn-primary" type="submit">Registrarse</button>
+
+    </form>
+    <br>
+    {{#if error2}}
+    <p>{{message}}</p>
+    {{/if}}
+
+</div>

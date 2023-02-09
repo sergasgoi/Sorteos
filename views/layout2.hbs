@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Sorteos</title>
+    <link rel="shortcut icon" href="/images/favicon.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+
+        <div class="row justify-content-around">
+            <div class="col2">
+                <ul class="nav nav-tabs justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sorteos">Sorteos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto">Contacto</a>
+                    </li>
+                    <li>
+                        <buttom class="switch" id="switch"><span><img class="sun" alt="" /></span>
+                            <span><img class="moon" alt="" /></span>
+                        </buttom>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="row justify-content-evenly">
+                <div class="col-6">
+                    {{{body}}}
+                </div>
+                <div class="col-2">
+                    <div class="cajauser">
+                        <h2>Hola {{usuario}}</h2>
+                        <button type="submit" class="btn btn-primary" onclick="location.href='/salir'">Salir</button>
+                    </div>
+                    <br>
+                    <div class="cajauser2">
+                        <nav class="nav flex-column">
+                            <br>
+                            <a class="btn btn-primary" href="/ver">Ver Sorteos</a>
+                            <br>
+                            <br>
+                            <a class="btn btn-primary" href="/agregar">Agregar Sorteos</a>
+                            <br>
+                            <br>
+                            <a class="btn btn-primary" href="/mensajes">Mensajes</a>
+                            <br>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+</body>
+
+<footer>
+    <div class="container text-center">
+
+        <div class="row justify-content-around">
+            <div class="col">
+
+                <p>Creado Por Gaston</p>
+
+            </div>
+</footer>
+
+
+<script src="javascripts/script.js"></script>
+<script src="../javascripts/script.js"></script>
+<script src="../../javascripts/script.js"></script>
+
+</html>

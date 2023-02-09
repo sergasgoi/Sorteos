@@ -1,0 +1,33 @@
+<div class="agregar">
+
+    <form action="/enviarmensaje" method="post">
+
+        <input type="hidden" name="id_nsort" value="{{sort.id_nsort}}">
+        <input type="hidden" name="sorteo" value="{{sort.sorteo}}">
+        <input type="hidden" name="participante" value="{{sort.participante}}">
+        <input type="hidden" name="id_usuario2" value="{{sort.id_usuario2}}">
+        
+        <br>
+        <input maxlength="50" class="form-control" type="text" name="remitente" id="inputRemitente"
+            placeholder="Coloque su Nombre" />
+        <br>
+        <input maxlength="50" class="form-control" type="email" name="email" id="inputEmail"
+            placeholder="Coloque su Email" />
+        <br>
+        <input maxlength="500" class="form-control" type="text" name="mensaje" id="inputMensaje"
+            placeholder="Coloque el Mensaje a enviar" />
+        <br>
+        
+
+        <button class="btn btn-primary" type="submit">Enviar</button>
+
+
+
+
+    </form>
+    <br>
+    {{#if error2}}
+    <p>{{message}}</p>
+    {{/if}}
+
+</div>

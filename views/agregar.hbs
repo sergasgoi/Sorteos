@@ -1,0 +1,24 @@
+<div class="agregar">
+
+    <form action="/agregar" method="post">
+
+        <br>
+        <input maxlength="15" class="form-control" type="text" name="sorteo" id="inputSorteo"
+            placeholder="Coloque el nombre del Sorteo" />
+        <br>
+        <input maxlength="3" class="form-control" type="tel" name="numero" id="inputParticipante"
+            placeholder="Coloque el numero de Participantes" />
+        <br>
+
+        <button class="btn btn-primary" type="submit">Agregar</button>
+
+
+
+
+    </form>
+    <br>
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+
+</div>

@@ -1,0 +1,23 @@
+<div class="vercuadros">
+
+    
+    {{#each vercuadros}}
+    
+    {{#if condicion}}
+
+    <button class="vercuad1">Num:<br>{{participante}}</button>
+
+    {{else}}
+
+    <a href="/enviarmensaje/{{id_nsort}}">
+    <button class="btn btn-primary vercuad3">Num:<br>{{participante}}</button>
+    </a>
+
+    {{/if}}
+
+    {{/each}}
+
+
+
+
+</div>

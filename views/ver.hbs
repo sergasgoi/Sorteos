@@ -1,0 +1,33 @@
+<div class="sorteos">
+
+    {{#if sorteos}}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        {{#each sorteos}}
+        <tbody>
+            <tr>
+                <th scope="row">{{sorteo}}</th>
+                <td>
+                    Ver: <a href="/vercuadros/{{sorteo}}"><img class="ver1" src="/images/lupa.png"></a>
+                    Editar: <a href="/verlista/{{sorteo}}"><img class="ver2" src="/images/editar.png"></a>
+                    Borrar: <a onclick="return confirm('¿Estas seguro que quieres borrar el sorteo?')" href="/borrar/{{sorteo}}"><img class="borrar"
+                            src="/images/borrar.png"></a>
+                </td>
+
+            </tr>
+
+        </tbody>
+        {{/each}}
+
+    </table>
+    {{else}}
+    <h2>No tiene ningun sorteo disponible.</h2>
+    {{/if}}
+
+</div>

@@ -1,0 +1,39 @@
+<div class="verlista">
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Sorteo</th>
+                <th scope="col">Numero</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        {{#each verlista}}
+        <tbody>
+            <tr>
+                <th scope="row">{{sorteo}}</th>
+                <td>{{participante}}</td>
+                <td>{{nombre}}</td>
+                <td>{{apellido}}</td>
+                <td>{{telefono}}</td>
+                <td>
+                    <a href="/editar/{{id_nsort}}"><img src="/images/editar.png"></a>
+                    <a onclick="return confirm('¿Estas seguro que quieres borrar los datos del participante?')"
+                        href="/delete/{{id_nsort}}&{{sorteo}}"><img src="/images/borrar.png"></a>
+                </td>
+
+            </tr>
+
+        </tbody>
+        {{/each}}
+
+    </table>
+
+
+
+
+</div>
