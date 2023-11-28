@@ -22,7 +22,7 @@ router.post('/', async function (req, res, next) {
                 var num = req.body.numero;
                 let array = []
                 for (let i = 1; i <= num; i++) {
-                    array.push([null, i, false, null, null, null, req.body.sorteo, req.session.id_usuario])
+                    array.push([null, i, false, "", "", "", req.body.sorteo, req.session.id_usuario])
                 }
                 let user = await consultas.getUserById(req.session.id_usuario)
                 await consultas.agregarSorteos(req.body.sorteo, req.session.id_usuario, user.usuario);
