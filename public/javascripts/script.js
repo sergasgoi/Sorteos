@@ -1,24 +1,23 @@
-const btnSwitch = document.querySelector("#switch");
+document.addEventListener("DOMContentLoaded", function() {
+    const switchButton = document.getElementById("switch");
+    const currentTheme = localStorage.getItem("theme");
 
-btnSwitch.addEventListener("click", () => {
-    document.activeElement.classList.toggle("dark");
-    btnSwitch.classList.toggle("active");
-
-    //guardar modo
-
-    if (document.activeElement.classList.contains("dark")) {
-        localStorage.setItem("dark-mode", "true");
-    } else{
-        localStorage.setItem("dark-mode", "false");
+    if (currentTheme) {
+        document.body.classList.add(currentTheme);
+        if (currentTheme === "dark") {
+            switchButton.classList.add("active");
+        }
     }
-})
 
-
-//optener modo al actualizar
-
-if(localStorage.getItem("dark-mode") === "true"){
-    document.activeElement.classList.add("dark");
-    btnSwitch.classList.add("active");
-} else {
-    document.activeElement.classList.remove("dark");
-}
+    switchButton.addEventListener("click", function() {
+        document.body.classList.toggle("dark");
+        let theme = "light";
+        if (document.body.classList.contains("dark")) {
+            theme = "dark";
+            switchButton.classList.add("active");
+        } else {
+            switchButton.classList.remove("active");
+        }
+        localStorage.setItem("theme", theme);
+    });
+});

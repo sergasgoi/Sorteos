@@ -96,7 +96,7 @@ async function deletenSorteos(sorteo, id_usuario) {
 }
 
 async function updateSorteos(id) {
-    var query = 'update nsorteos set nombre=null, apellido=null, telefono=null, condicion=false  where id_nsort=?';
+    var query = 'UPDATE nsorteos SET nombre = "", apellido = "", telefono = "", condicion = 0 WHERE id_nsort = ?';
     var datos = await pool.query(query, [id]);
     return datos;
 }
