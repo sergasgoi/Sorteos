@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de Sorteos</title>
     <link rel="shortcut icon" href="/images/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
     <nav class="nav">
         <a class="nav-link" aria-current="page" href="/">Inicio</a>
         <a class="nav-link" href="/sorteos">Sorteos</a>
         <a class="nav-link" href="/nosotros">Sobre Nosotros</a>
         <a class="nav-link" href="/contacto">Contacto</a>
-        <button class="switch" id="switch"><span><img class="sun" alt="" /></span><span><img class="moon" alt="" /></span></button>
+        <button class="switch" id="switch"><span><img class="sun" alt="" /></span><span><img class="moon"
+                    alt="" /></span></button>
     </nav>
     <div class="container text-center">
         <div class="row justify-content-evenly">
@@ -29,12 +33,20 @@
                         <label for="inputUser">Usuario</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+                        <input type="password" name="password" class="form-control" id="inputPassword"
+                            placeholder="Contraseña">
                         <label for="inputPassword">Contraseña</label>
                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <br>
                 </form>
+                {{#if error}}
+                <br>
+                <p>Usuario y/o Contraseña Incorrecto/s</p>
+                {{/if}}
+                <br>
+                <a class="btn btn-primary" href="/register">Registrarse</a>
             </div>
         </div>
     </div>
@@ -43,4 +55,5 @@
     </footer>
     <script src="javascripts/script.js"></script>
 </body>
+
 </html>
